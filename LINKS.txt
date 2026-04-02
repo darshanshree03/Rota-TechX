@@ -1,0 +1,41 @@
+<div class="u-container u-width-full"><section class="cause-navigation u-background-triangles u-background-darkblue">
+  <div class="hero -title -slim" data-module="hero" data-is="loaded">
+    <div class="hero-text">
+      <h2 class="heading-h3 -alternate">Explore Other Causes
+</h2>
+    </div>
+  </div>
+  <ul class="cause-navigation-list">
+          <li class="cause-navigation-item" id="cause">
+        <a href="https://www.rotary.org/en/our-causes/promoting-peace"><p>Promoting Peace</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+          <li class="cause-navigation-item" id="cause--2">
+        <a href="https://www.rotary.org/en/our-causes/providing-clean-water"><p>Providing Clean Water</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+          <li class="cause-navigation-item" id="cause--3">
+        <a href="https://www.rotary.org/en/our-causes/saving-mothers-and-children"><p>Saving Mothers &amp; Children</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+          <li class="cause-navigation-item" id="cause--4">
+        <a href="https://www.rotary.org/en/our-causes/supporting-education"><p>Supporting Education</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+          <li class="cause-navigation-item" id="cause--5">
+        <a href="https://www.rotary.org/en/our-causes/growing-local-economies"><p>Growing Local Economies</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+          <li class="cause-navigation-item" id="cause--6">
+        <a href="https://www.rotary.org/en/our-causes/protecting-environment"><p>Protecting the Environment</p>
+</a>
+        <span class="cause-navigation-image"></span>
+      </li>
+      </ul>
+</section>
+</div>

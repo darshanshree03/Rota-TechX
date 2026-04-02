@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Rota-TechX — A 24-hour intercollegiate hackathon by the Rotaract Club of SVCE. Innovate for Impact." />
+  <title>Rota-TechX Hackathon 2026 | #InnovateForImpact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ═══ GLOBAL BACKGROUND VIDEO ═══ -->
+  <video autoplay muted loop playsinline preload="none"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -10;">
+    <source src="assets/videos/25696-352026473_medium.mp4" type="video/mp4">
+    <source src="assets/videos/vecteezy_white-and-black-color-particles-wave-cyber-technology_35956470.mp4"
+      type="video/mp4">
+  </video>
+  <!-- Dark scrim for overall text readability -->
+  <div
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -9; background: rgba(2, 6, 23, 0.65);">
+  </div>
+
+  <nav>
+    <div class="nav-content">
+      <div class="logo-text">
+        <img src="assets/images/logo.png" alt="Rota-TechX Logo" class="logo-img" />
+      </div>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ol class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#problemstatements">Domains</a></li>
+        <li><a href="#Timeline">Timeline</a></li>
+        <li><a href="#speakers">Panelists</a></li>
+        <li><a href="#team-section">Our Team</a></li>
+        <li><a href="#gallery">Event Highlights</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </div>
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+
+    <!-- Particle / Neural Network Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="hero-content">
+      <h1>Rota-TechX</h1>
+      <h2 class="hero-tagline">#INNOVATEFORIMPACT</h2>
+
+      <div class="event-time">April 25 &ndash; 26, 2026</div>
+
+      <!-- Futuristic Countdown Timer -->
+      <div id="countdown-container">
+        <div class="cd-box">
+          <span class="cd-digit" id="cd-days">00</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <span class="cd-sep">:</span>
+        <div class="cd-box">
+          <span class="cd-digit" id="cd-hours">00</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <span class="cd-sep">:</span>
+        <div class="cd-box">
+          <span class="cd-digit" id="cd-minutes">00</span>
+          <span class="cd-label">Mins</span>
+        </div>
+        <span class="cd-sep">:</span>
+        <div class="cd-box">
+          <span class="cd-digit" id="cd-seconds">00</span>
+          <span class="cd-label">Secs</span>
+        </div>
+      </div>
+
+      <!-- Register Now Hero Button -->
+      <a href="https://rotatechx-1.devfolio.co/" target="_blank" class="register-hero-btn">
+        <i class="fas fa-rocket" style="margin-right:0.5rem"></i>Register Now
+      </a>
+
+      <div class="cta-buttons" style="margin-top:1.5rem">
+        <button class="secondary-btn"><a href="https://chat.whatsapp.com/GaNVRwFvrMXFIoK5MjlDqY"
+            style="color: whitesmoke;">JOIN OUR COMMUNITY</a></button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+
+    <div class="container">
+      <div class="about-two-col">
+
+        <!-- Left: Heading + Text -->
+        <div class="about-left about-animate-left" style="text-align: center;">
+          <h2 class="section-title">About Rota-TechX</h2>
+          <div class="about-accent-line" style="display: none;"></div>
+          <p class="about-text">
+            RotatechX is a 24-hour intercollegiate hackathon hosted by the Rotaract Club of Sri Venkateswara College of
+            Engineering.
+            This event brings together creative minds to solve real-world challenges based on Rotary's 7 Areas of Focus.
+            Participants brainstorm, develop, and refine their ideas into impactful solutions, which they pitch to a
+            panel of esteemed judges.
+            With innovation and teamwork at its core, RotatechX is a platform for aspiring problem-solvers to showcase
+            their skills and create meaningful change.
+          </p>
+        </div>
+
+        <!-- Right: Stat Cards -->
+        <div class="about-right about-animate-right">
+          <div class="stat-card-v2 about-card-stagger">
+            <span class="stat-number stat-v2-num">200+</span>
+            <span class="stat-v2-label">Participants</span>
+          </div>
+          <div class="stat-card-v2 about-card-stagger">
+            <span class="stat-number stat-v2-num">₹50000+</span>
+            <span class="stat-v2-label">Prize Pool</span>
+          </div>
+          <div class="stat-card-v2 about-card-stagger">
+            <span class="stat-number stat-v2-num">24</span>
+            <span class="stat-v2-label">Hours of Hacking</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ════════════════════════════════════════════
+       DOMAINS — Scroll Storytelling
+  ════════════════════════════════════════════ -->
+  <section class="domains-section" id="problemstatements">
+
+    <div class="container" style="text-align: center; margin-bottom: 2rem;">
+      <h2 class="section-title reveal">Rotary's 7 Areas of Focus</h2>
+    </div>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding-top: 2rem;">
+      <div class="problemstatements-grid">
+
+        <!-- 01 Peace -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-dove"></i></div>
+          <h3 class="domain-title">Peace &amp; Conflict</h3>
+          <div class="domain-desc">
+            <p>Foster inclusive dialogue and develop tech-driven solutions for global stability and peacebuilding.</p>
+          </div>
+        </div>
+
+        <!-- 02 Disease -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3 class="domain-title">Disease Prevention</h3>
+          <div class="domain-desc">
+            <p>Innovate healthcare accessibility, preventive measures, and scalable medical infrastructure.</p>
+          </div>
+        </div>
+
+        <!-- 03 Water -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-hand-holding-water"></i></div>
+          <h3 class="domain-title">Water &amp; Sanitation</h3>
+          <div class="domain-desc">
+            <p>Build smarter water management systems for clean, safe, and universally accessible resources.</p>
+          </div>
+        </div>
+
+        <!-- 04 Maternal -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-baby"></i></div>
+          <h3 class="domain-title">Maternal &amp; Child Health</h3>
+          <div class="domain-desc">
+            <p>Design solutions to reduce maternal and infant mortality rates and improve childhood nutrition.</p>
+          </div>
+        </div>
+
+        <!-- 05 Education -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-book-reader"></i></div>
+          <h3 class="domain-title">Basic Education</h3>
+          <div class="domain-desc">
+            <p>Empower learners of all ages through accessible literacy platforms and ed-tech breakthroughs.</p>
+          </div>
+        </div>
+
+        <!-- 06 Economic -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="domain-title">Economic Development</h3>
+          <div class="domain-desc">
+            <p>Drive localized economic growth via financial inclusion, micro-lending, and entrepreneurship tools.</p>
+          </div>
+        </div>
+
+        <!-- 07 Environment -->
+        <div class="domain-card">
+          <div class="domain-glow"></div>
+          <div class="domain-icon"><i class="fas fa-leaf"></i></div>
+          <h3 class="domain-title">Environment</h3>
+          <div class="domain-desc">
+            <p>Tackle climate challenges with sustainable, data-driven, eco-focused technological systems.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Download abstract — below the scroll zone -->
+    <div class="abstract-section reveal" style="margin: 0 auto; max-width:1200px; padding: 3rem 2rem 5rem;">
+      <div class="abstract-content">
+        <p class="abstract-title">Download Abstract</p>
+        <p class="abstract-text">Start Round 1 by submitting your abstract! Use the official template, follow the
+          structure, and make it stand out!</p>
+      </div>
+      <div class="cta-buttons" style="margin-top: 1.5rem;">
+        <a href="assets/images/Rota-TechX Abstract.pptx" download class="primary-btn" style="text-decoration:none;">
+          <i class="fas fa-download" style="margin-right: 8px;"></i> Download
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <div class="space_it"></div>
+
+
+
+
+  <section class="Timeline" id="Timeline">
+    <div class="container">
+      <h2 class="section-title reveal">Timeline</h2>
+      <br />
+      <br />
+      <div class="Timeline-grid">
+        <ul>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 1</div>
+            <div class="date">02.03.2026</div>
+            <div class="title">Domains / Hackathon Tracks Reveal</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 2</div>
+            <div class="date">05.03.2026</div>
+            <div class="title">Registration Open</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 3</div>
+            <div class="date">19.03.2026</div>
+            <div class="title">Abstract Submission Deadline</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 4</div>
+            <div class="date">21.03.2026</div>
+            <div class="title">Shortlisted Team Results</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 5</div>
+            <div class="date">22.03.2026</div>
+            <div class="title">RSVP from Teams</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 6</div>
+            <div class="date">25.03.2026</div>
+            <div class="title">Hackathon Starts</div>
+            <div class="descr"></div>
+          </li>
+          <li class="timeline-stage">
+            <div class="stage-label">Stage 7</div>
+            <div class="date">26.03.2026</div>
+            <div class="title">Hackathon Ends</div>
+            <div class="descr"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="space_it"></div>
+
+  <section class="speakers" id="speakers">
+    <div class="container">
+      <h2 class="section-title reveal" style="margin-bottom: 2rem;">Featuring Panelists</h2>
+
+      <div style="text-align: center; padding: 4rem 0;">
+        <h3 class="revealing-soon-anim">Panelists Revealing Soon</h3>
+      </div>
+    </div>
+  </section>
+  <div class="space_it"></div>
+
+  <section class="team-section" id="team-section">
+    <div class="container">
+      <h2 class="section-title reveal" style="margin-bottom: 3rem;">Our Team</h2>
+
+      <!-- ── Core Team ── -->
+      <div class="team-category" id="core-team">
+        <h3 class="team-category-title">Core Team</h3>
+
+        <div class="team-belt-outer">
+          <div class="belt-fade belt-fade-left"></div>
+          <div class="belt-fade belt-fade-right"></div>
+
+          <div class="team-belt" id="core-belt">
+
+            <div class="belt-card" data-name="Rtr. Shree Dharshan S" data-role="Chairperson"
+              data-ig="https://www.instagram.com/_.imnot_dharshanshree._?igsh=MTR3dWF0cjBwZWprZA=="
+              data-li="https://www.linkedin.com/in/shree-dharshan-s-9020192a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <img src="assets/images/Shree.jpeg" alt="Shree">
+              <div class="card-detail">
+                <p class="card-name">Shree Dharshan S</p>
+                <p class="card-role">Chairperson</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/_.imnot_dharshanshree._?igsh=MTR3dWF0cjBwZWprZA=="
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/shree-dharshan-s-9020192a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Daksha" data-role="Secretary"
+              data-ig="https://www.instagram.com/dakshasuresh25?igsh=N3o5dTUzcHlvMzFv"
+              data-li="https://www.linkedin.com/in/daksha-suresh-0522b330a?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Daksha.jpeg" alt="Daksha">
+              <div class="card-detail">
+                <p class="card-name">Daksha S</p>
+                <p class="card-role">Secretary</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/dakshasuresh25?igsh=N3o5dTUzcHlvMzFv" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/daksha-suresh-0522b330a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Abishek M" data-role="President"
+              data-ig="https://www.instagram.com/abishek._.7?igsh=MWVpeDg5bWt0dTJhZA%3D%3D&utm_source=qr"
+              data-li="https://www.linkedin.com/in/abishek-m-a92903236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+              <img src="assets/images/Abishek Photo.jpg" alt="Abishek">
+              <div class="card-detail">
+                <p class="card-name">Abishek M</p>
+                <p class="card-role">President</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/abishek._.7?igsh=MWVpeDg5bWt0dTJhZA%3D%3D&utm_source=qr"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/ashwin-r-33b372255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Vishnnu P" data-role="Secretary"
+              data-ig="https://www.instagram.com/vishnnu_17/"
+              data-li="https://www.linkedin.com/in/vishnnu-p-b56955292/">
+              <img src="assets/images/Vishnnu.jpeg" alt="Vishnnu">
+              <div class="card-detail">
+                <p class="card-name">Vishnnu P</p>
+                <p class="card-role">Secretary</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/vishnnu_17/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/vishnnu-p-b56955292/" target="_blank"><i
+                      class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /core-belt -->
+        </div><!-- /belt-outer -->
+      </div><!-- /core-team -->
+
+      <div class="space_it"></div>
+
+      <!-- ── Heads ── -->
+      <div class="team-category" id="heads-team">
+        <h3 class="team-category-title">Heads</h3>
+
+        <div class="team-belt-outer">
+          <div class="belt-fade belt-fade-left"></div>
+          <div class="belt-fade belt-fade-right"></div>
+
+          <div class="team-belt" id="heads-belt">
+
+            <div class="belt-card" data-name="Rtr. Sarathi Selvam" data-role="Design Head"
+              data-ig="https://www.instagram.com/alwaysayeagerist?igsh=MTFhbTR2ZzNxNWhkaw=="
+              data-li="https://www.linkedin.com/in/sarathi-selvam-d?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Sarathi.jpeg" alt="Sarathi">
+              <div class="card-detail">
+                <p class="card-name">Sarathi Selvam</p>
+                <p class="card-role">Design Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/alwaysayeagerist?igsh=MTFhbTR2ZzNxNWhkaw==" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/sarathi-selvam-d?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Harshinivarsa SK" data-role="Sponsorship Head"
+              data-ig="https://www.instagram.com/harshinihere_1026?igsh=aDVpN2xiMThvdXUx&utm_source=qr"
+              data-li="https://www.linkedin.com/in/harshinivarsa-s-k-494950290?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+              <img src="assets/images/Harshini.jpeg" alt="Harshinivarsa">
+              <div class="card-detail">
+                <p class="card-name">Harshinivarsa SK</p>
+                <p class="card-role">Sponsorship Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/harshinihere_1026?igsh=aDVpN2xiMThvdXUx&utm_source=qr"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/harshinivarsa-s-k-494950290?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Madhushree SN" data-role="Programs Head"
+              data-ig="https://www.instagram.com/_madhushree0517_?igsh=aHY0eTdmNjBteG56"
+              data-li="https://www.linkedin.com/in/madhushree-naga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+              <img src="assets/images/madhushree.jpeg" alt="Madhushree">
+              <div class="card-detail">
+                <p class="card-name">Madhushree SN</p>
+                <p class="card-role">Programs Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/_madhushree0517_?igsh=aHY0eTdmNjBteG56" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/madhushree-naga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Sri Hari Roshan N" data-role="Registrations Head"
+              data-ig="https://www.instagram.com/r_3_o_s_h_1_a_n_7?igsh=YzVvM3A5OXZ6YW1x"
+              data-li="https://www.linkedin.com/in/sri-hari-roshan-n-cse-9741a8328?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Roshan.jpeg" alt="Roshan">
+              <div class="card-detail">
+                <p class="card-name">Sri Hari Roshan N</p>
+                <p class="card-role">Registrations Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/r_3_o_s_h_1_a_n_7?igsh=YzVvM3A5OXZ6YW1x" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/sri-hari-roshan-n-cse-9741a8328?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Sanjay Charan" data-role="Food Head"
+              data-ig="https://www.instagram.com/sasanjaycharan?igsh=cmk4bTA4ZHR5NGVs&utm_source=qr"
+              data-li="https://www.linkedin.com/in/sanjay-charan-saravanan-0307s2005?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+              <img src="assets/images/Sanjay.jpeg" alt="Sanjay">
+              <div class="card-detail">
+                <p class="card-name">Sanjay Charan</p>
+                <p class="card-role">Food Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/sasanjaycharan?igsh=cmk4bTA4ZHR5NGVs&utm_source=qr"
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/sanjay-charan-saravanan-0307s2005?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Lithesh C" data-role="Operation Head"
+              data-ig="https://www.instagram.com/_lithesh_.31?igsh=YTRjYjcxM2VxYWQy"
+              data-li="https://www.linkedin.com/in/lithesh-c-aa57a82a5?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Dhanush K__Head__ RAC SVCE.jpg" alt="Lithesh">
+              <div class="card-detail">
+                <p class="card-name">Lithesh C</p>
+                <p class="card-role">Operation Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/_lithesh_.31?igsh=YTRjYjcxM2VxYWQy" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/lithesh-c-aa57a82a5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Manoj R" data-role="Branding Head"
+              data-ig="https://www.instagram.com/iammanoj_19?igsh=MWg1ZXhibGswMDZvdQ=="
+              data-li="https://www.linkedin.com/in/manoj-r-05565731b?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Rtr.Manoj R-Associate Club service director.png" alt="Manoj">
+              <div class="card-detail">
+                <p class="card-name">Manoj R</p>
+                <p class="card-role">Branding Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/iammanoj_19?igsh=MWg1ZXhibGswMDZvdQ==" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/manoj-r-05565731b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Harini S" data-role="Research Head"
+              data-ig="https://www.instagram.com/harini_2407?igsh=MWp1OXQ4ZnQ1czdlYg=="
+              data-li="https://www.linkedin.com/in/harini-swaminathan-86581b291?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+              <img src="assets/images/Harini.jpeg" alt="Harini">
+              <div class="card-detail">
+                <p class="card-name">Harini S</p>
+                <p class="card-role">Research Head</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/harini_2407?igsh=MWp1OXQ4ZnQ1czdlYg==" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/harini-swaminathan-86581b291?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Arjun Sathish KK" data-role="Video Editor"
+              data-ig="https://www.instagram.com/a4junsathish?igsh=MXB0NGpvbGZkNjU4cQ==" <img
+              src="assets/images/arjun.jpeg" alt="Video Editor">
+              <div class="card-detail">
+                <p class="card-name">Arjun Sathish KK</p>
+                <p class="card-role">Video Editor</p>
+                <div class="card-socials">
+                  <a href="https://www.instagram.com/a4junsathish?igsh=MXB0NGpvbGZkNjU4cQ==" target="_blank"><i
+                      class="fab fa-instagram"></i></a>
+                  target="_blank">
+                </div>
+              </div>
+            </div>
+
+            <div class="belt-card" data-name="Rtr. Adithya A" data-role="Kit Head"
+              data-li="https://www.linkedin.com/in/adithya-a-54732a339?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+              <img src="assets/images/Adithya.jpeg" alt="Adithya">
+              <div class="card-detail">
+                <p class="card-name">Arjun Sathish</p>
+                <p class="card-role">Kit Head</p>
+                <div class="card-socials">
+                  <a href="https://www.linkedin.com/in/adithya-a-54732a339?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /heads-belt -->
+        </div><!-- /belt-outer -->
+      </div><!-- /heads-team -->
+
+    </div><!-- /container -->
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════════
+       EVENT GALLERY — Cinematic Scroll Experience
+  ═══════════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+
+
+
+    <!-- ── Scroll-pinned slides ── -->
+    <div class="gallery-scroll-wrapper" id="galleryScrollWrapper">
+
+      <!-- Sticky viewport -->
+      <div class="gallery-sticky" id="gallerySticky">
+
+
+
+        <!-- Slides (full-bleed, layered) -->
+        <div class="gallery-slides" id="gallerySlides">
+
+          <div class="gallery-slide active" data-index="0">
+            <div class="gs-bg" style="background-image:url('assets/images/2 (1).jpg')"></div>
+            <div class="gs-content">
+              <h2 class="gs-title">Opening Ceremony</h2>
+              <p class="gs-caption">Where it all begins, with ideas waiting to take shape.<br>A stage set for
+                innovation, energy, and endless possibilities
+              </p>
+            </div>
+            <div class="gs-counter">01 / 05</div>
+          </div>
+
+          <div class="gallery-slide" data-index="1">
+            <div class="gs-bg" style="background-image:url('assets/images/4 (1).jpg')"></div>
+            <div class="gs-content">
+              <h2 class="gs-title">Ideas in Motion</h2>
+              <p class="gs-caption">From thoughts to action, the journey kicks off.<br>Every line of code brings a new
+                idea to life..</p>
+            </div>
+            <div class="gs-counter">02 / 05</div>
+          </div>
+
+          <div class="gallery-slide" data-index="2">
+            <div class="gs-bg" style="background-image:url('assets/images/Building\ together.JPG')"></div>
+            <div class="gs-content">
+              <h2 class="gs-title">Building Together</h2>
+              <p class="gs-caption">Collaboration turns challenges into solutions.<br>Guided by mentors, strengthened by
+                teamwork.
+              </p>
+            </div>
+            <div class="gs-counter">03 / 05</div>
+          </div>
+
+          <div class="gallery-slide" data-index="4">
+            <div class="gs-bg" style="background-image:url('assets/images/echoes\ of\ innovation.JPG')"></div>
+            <div class="gs-content">
+              <h2 class="gs-title">Echoes of Innovation</h2>
+              <p class="gs-caption">Moments where ideas prove their impact.<br>Where creativity meets recognition.</p>
+            </div>
+            <div class="gs-counter">04 / 05</div>
+          </div>
+
+          <div class="gallery-slide" data-index="5">
+            <div class="gs-bg" style="background-image:url('assets/images/Until\ next\ time.JPG')"></div>
+            <div class="gs-content">
+              <h2 class="gs-title">Until Next Time</h2>
+              <p class="gs-caption">Not the end, just the beginning of what’s next.<br>Memories made, bonds formed, and
+                stories to carry forward..</p>
+            </div>
+            <div class="gs-counter">05 / 05</div>
+          </div>
+
+        </div><!-- /gallery-slides -->
+
+
+      </div><!-- /gallery-sticky -->
+    </div><!-- /gallery-scroll-wrapper -->
+
+    <!-- ── Horizontal filmstrip (draggable) ── -->
+    <div class="filmstrip-wrapper">
+      <p class="filmstrip-hint">↔ Drag to explore</p>
+      <div class="filmstrip" id="filmstrip">
+        <div class="film-frame"><img src="assets/images/2 (1).jpg" alt="Opening Ceremony"></div>
+        <div class="film-frame"><img src="assets/images/4 (1).jpg" alt="Ideas in Motion"></div>
+        <div class="film-frame"><img src="assets/images/6 (1).jpg" alt="Building Together"></div>
+        <div class="film-frame"><img src="assets/images/8 (1).jpg" alt="Demo Day"></div>
+        <div class="film-frame"><img src="assets/images/1 (1).png" alt="Champions Crowned"></div>
+        <div class="film-frame"><img src="assets/images/3 (1).png" alt="Until Next Time"></div>
+        <!-- duplicated for infinite feel -->
+        <div class="film-frame"><img src="assets/images/2 (1).jpg" alt="Opening Ceremony"></div>
+        <div class="film-frame"><img src="assets/images/4 (1).jpg" alt="Ideas in Motion"></div>
+        <div class="film-frame"><img src="assets/images/6 (1).jpg" alt="Building Together"></div>
+        <div class="film-frame"><img src="assets/images/8 (1).jpg" alt="Demo Day"></div>
+        <div class="film-frame"><img src="assets/images/1 (1).png" alt="Champions Crowned"></div>
+        <div class="film-frame"><img src="assets/images/3 (1).png" alt="Until Next Time"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <div class="space_it"></div>
+
+  <!-- ═══════════════════════════════════════════
+       SPONSORS SECTION — Premium 3-Tier Layout
+  ═══════════════════════════════════════════ -->
+  <section class="sponsors-premium" id="partners">
+    <div class="container" style="text-align: center; max-width: 900px; margin: 0 auto; padding-top: 2rem;">
+      <h2 class="section-title reveal">Allies of Innovation</h2>
+      
+      <div class="hologram-container reveal">
+        <div class="hologram-scanline"></div>
+        
+        <div style="position: relative; z-index: 1;">
+          <div class="hologram-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          
+          <h3 class="revealing-soon-anim" style="margin-bottom: 1rem; font-size: 2.2rem;">Establishing Uplinks</h3>
+          
+          <div class="crypto-text">
+            <p>Synching with global syndicates and visionary sponsors.</p>
+            <p style="margin-top: 0.8rem; color: rgba(60, 223, 255, 0.8);">
+              <i class="fas fa-lock" style="font-size: 0.8rem; margin-right: 5px;"></i> Encrypted partner data will be unlocked soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="space_it"></div>
+
+
+
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Who can participate?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Any undergrade student is eligible to participate in the hackathon.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is there a registration fee?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>No, there is no registration fee for this event.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Does this hackathon cover both software and hardware projects?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, participants can work on both software and hardware projects.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>I am a newbie, can I hack?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! Beginners are welcome, and this is a great opportunity to learn and collaborate.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What should I bring for the hackathon?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p> Please bring your student ID, laptop, necessary gadgets, and any other materials you may need for your
+              project.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Will there be WiFi facility?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we will provide WiFi access throughout the event.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I participate without a team?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p> No, this is a team-based event. Each team must consist of 4 to 6 members.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Will you sponsor our travel costs?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Unfortunately, we do not provide reimbursement for travel expenses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="space_it"></div>
+
+  <!-- Floating Register Now Button -->
+  <div class="floating-register-btn">
+    <a href="https://rotatechx-1.devfolio.co/" target="_blank">
+      <i class="fas fa-rocket"></i> Register Now
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section socials">
+        <h3>Contact Us</h3>
+        <div class="contact-details">
+          <div>
+            <p>Shree Dharshan S</p>
+            <a>+91 6374141227</a>
+            <br>
+            <p>Abishek M</p>
+            <a>+91 9080866666</a>
+            <br>
+            <p>Daksha S</p>
+            <a>+91 90435 90574</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-section socials">
+        <h3 class="map">Connect With Us</h3>
+        <div class="connect-links">
+          <a href="https://www.instagram.com/rotatechx?igsh=MzNvOTllcnA4MDAy" class="social-link" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/rotaract-club-of-sri-venkateswara-college-of-engineering/"
+            class="social-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="contact-email">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:rotatechx@gmail.com">rotatechx@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer-section venue">
+        <h3> Venue</h3>
+        <div class="venue-details">
+          <p>
+            FINSTEIN<br />
+            Third Floor, Door No. 84,<br />
+            DK Adikesavalu Naidu Complex, C' Block,<br />
+            Greams Rd, Thousand Lights,<br />
+            Chennai, Tamil Nadu 600006<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-section map">
+        <h3>Find Us on Map</h3>
+        <div class="map-container" style="text-align: center;">
+          <a href="https://share.google/xxD4a57whVamn1n2u" target="_blank" rel="noopener noreferrer"
+            style="display: inline-block; background: #030814; padding: 10px 20px; border: 1px solid #3cdfff; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600;">
+            <i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #3cdfff;"></i> View on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Rota-TechX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Legacy countdown removed — handled by script.js
+    function updateCountdown_LEGACY() {
+      const targetDate = new Date("April 12, 2025 00:00:00").getTime();
+
+      function update() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+
+        if (distance < 0) {
+          clearInterval(timerInterval);
+          document.querySelector(".countdown-container").innerHTML = '<div class="expired">Event has started!</div>';
+        }
+      }
+
+      update();
+      const timerInterval = setInterval(update, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCountdown);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+  <script>
+    let lastFlippedCard = null; // Store the last flipped card
+
+    document.querySelectorAll(".problem-card").forEach(card => {
+      card.addEventListener("mouseenter", function () {
+        // If the card has already flipped, do nothing
+        if (this.classList.contains("flipped")) return;
+
+        // Reset the last flipped card
+        if (lastFlippedCard) {
+          lastFlippedCard.classList.remove("flipped");
+        }
+
+        // Flip the new card
+        this.classList.add("flipped");
+        lastFlippedCard = this; // Store the currently flipped card
+      });
+    });
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".gallery-image");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Show the first image on page load
+    showSlide(currentSlide);
+
+  </script>
+
+</body>
+
+</html>
