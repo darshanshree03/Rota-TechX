@@ -941,18 +941,26 @@ document.addEventListener("DOMContentLoaded", function () {
 /* --------------------------------------------
    PRELOADER & WINDOW FULLY LOADED LOGIC
    -------------------------------------------- */
-window.addEventListener("load", function () {
+let preloaderRemoved = false;
+
+function dismissPreloader() {
+  if (preloaderRemoved) return;
+  preloaderRemoved = true;
+  
   const preloader = document.getElementById("preloader");
   if (preloader) {
-    // Adding class triggers the CSS opacity/visibility fade-out
     preloader.classList.add("preloader-hide");
-    
-    // Unlock scrolling by removing the class from body
     document.body.classList.remove("no-scroll");
-    
-    // Optional: After transition completes, remove preloader from DOM to keep it clean
     setTimeout(() => {
       preloader.remove();
-    }, 800); // Wait 800ms to correspond with the 0.8s CSS transition
+    }, 800);
   }
-});
+}
+
+// 1. Primary Trigger: Standard complete load
+window.addEventListener("load", dismissPreloader);
+
+// 2. Failsafe Trigger: Maximum wait time is 3.5 seconds.
+// If any massive 10MB+ images or Devfolio scripts stall the network,
+// this strictly guarantees the user is never stuck waiting.
+setTimeout(dismissPreloader, 3500);
