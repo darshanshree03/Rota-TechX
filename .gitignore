@@ -3,6 +3,3 @@ dist/
 build/
 .env
 .vscode/
-assets/videos/
-*.mp4
-*.mov
