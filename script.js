@@ -938,3 +938,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+/* --------------------------------------------
+   PRELOADER & WINDOW FULLY LOADED LOGIC
+   -------------------------------------------- */
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    // Adding class triggers the CSS opacity/visibility fade-out
+    preloader.classList.add("preloader-hide");
+    
+    // Unlock scrolling by removing the class from body
+    document.body.classList.remove("no-scroll");
+    
+    // Optional: After transition completes, remove preloader from DOM to keep it clean
+    setTimeout(() => {
+      preloader.remove();
+    }, 800); // Wait 800ms to correspond with the 0.8s CSS transition
+  }
+});

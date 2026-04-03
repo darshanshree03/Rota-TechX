@@ -6412,3 +6412,106 @@ p, .about-text, .timeline-text, .faq-answer p, .p-role, .p-company {
   right: auto !important;
 }
 
+
+/* --------------------------------------------
+   FUTURISTIC PRELOADER
+   -------------------------------------------- */
+.no-scroll {
+  overflow: hidden !important;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #020617;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+#preloader.preloader-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Cyber Ring Container */
+.cyber-loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2.5rem;
+}
+
+/* Neon Rings */
+.cyber-loader .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.cyber-loader .ring-outer {
+  inset: 0;
+  border-top-color: #3cdfff;
+  border-bottom-color: rgba(60, 223, 255, 0.1);
+  box-shadow: 0 0 20px rgba(60, 223, 255, 0.5);
+  animation: spinOuter 2s linear infinite;
+}
+
+.cyber-loader .ring-inner {
+  inset: 15px;
+  border-left-color: #0051ff;
+  border-right-color: rgba(0, 81, 255, 0.2);
+  animation: spinInner 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.cyber-loader .core-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #e6f1ff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #e6f1ff, 0 0 30px #3cdfff;
+  animation: pulseCore 1s ease-in-out infinite alternate;
+}
+
+/* Loading Text */
+.preloader-text {
+  font-family: "Space Grotesk", monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6f1ff;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(60, 223, 255, 0.8);
+  animation: textBlink 2s infinite;
+}
+
+/* Animations */
+@keyframes spinOuter {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinInner {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pulseCore {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 1; box-shadow: 0 0 25px #fff, 0 0 50px #3cdfff; }
+}
+
+@keyframes textBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
