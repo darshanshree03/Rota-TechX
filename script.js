@@ -822,6 +822,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ─── 7. Mouse drag ─── */
+    belt.style.cursor = "grab";
     let dragPrevX = 0, dragLastDelta = 0;
     let dragStartPos = 0;
 
@@ -853,39 +854,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /* ─── 8. Touch swipe ─── */
-    let touchPrevX = 0, touchLastDelta = 0;
+    let touchPrevX = 0, touchPrevY = 0, touchLastDelta = 0;
+    let touchAxisLocked = false;
+    let touchAxis = null;
 
     belt.addEventListener("touchstart", e => {
       startInteraction();
       isDragging  = true;
       touchPrevX  = e.touches[0].clientX;
+      touchPrevY  = e.touches[0].clientY;
       touchLastDelta = 0;
+      touchAxisLocked = false;
+      touchAxis = null;
     }, { passive: true });
 
     belt.addEventListener("touchmove", e => {
       if (!isDragging) return;
-      const delta = e.touches[0].clientX - touchPrevX;
+      
+      const currentX = e.touches[0].clientX;
+      const currentY = e.touches[0].clientY;
+      
+      if (!touchAxisLocked) {
+        const diffX = Math.abs(currentX - touchPrevX);
+        const diffY = Math.abs(currentY - touchPrevY);
+        // Threshold to determine scrolling direction
+        if (diffX > 5 || diffY > 5) {
+          touchAxis = diffX > diffY ? 'x' : 'y';
+          touchAxisLocked = true;
+        }
+      }
+      
+      // If user is mostly scrolling vertically, ignore X offsets
+      if (touchAxis === 'y') {
+        return;
+      }
+
+      const delta = currentX - touchPrevX;
       touchLastDelta = -delta;
       pos -= delta;
-      touchPrevX = e.touches[0].clientX;
+      touchPrevX = currentX;
+      touchPrevY = currentY;
     }, { passive: true });
 
     belt.addEventListener("touchend", () => {
       isDragging = false;
-      velocity = touchLastDelta * 0.8;
+      // Only apply swipe momentum if horizontal swipe
+      if (touchAxis !== 'y') {
+        velocity = touchLastDelta * 0.8;
+      }
       endInteraction();
     }, { passive: true });
-
-    /* ─── 9. Wheel / trackpad scroll ─── */
-    belt.parentElement.addEventListener("wheel", e => {
-      startInteraction();
-      // Accept both horizontal (trackpad) and vertical (mouse wheel) scroll
-      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-      pos += delta * 1.2;
-      endInteraction();
-      // Prevent page scroll while over the carousel
-      e.preventDefault();
-    }, { passive: false });
 
     /* ─── 10. Boot ─── */
     // Wait one frame so card dimensions are available

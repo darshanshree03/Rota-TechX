@@ -6240,15 +6240,13 @@ p, .about-text, .timeline-text, .faq-answer p, .p-role, .p-company {
 .Timeline-grid ul::before {
   display: block !important;
   content: "" !important;
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 2px !important;
-  height: 100% !important;
   background: linear-gradient(to bottom, transparent, #3cdfff 10%, #3cdfff 90%, transparent) !important;
   box-shadow: 0 0 15px rgba(60, 223, 255, 0.5) !important;
   z-index: 0 !important;
   border-radius: 2px !important;
+  /* Allow native CSS grid placement instead of forced absolute 50% */
+  position: static !important;
+  transform: none !important;
 }
 
 /* Subtle pulse runner moving down the line */
@@ -6266,6 +6264,12 @@ p, .about-text, .timeline-text, .faq-answer p, .p-role, .p-company {
   z-index: 1 !important;
   animation: timelineRun 4s linear infinite !important;
   top: 0 !important;
+}
+
+@media (max-width: 40rem) {
+  .Timeline-grid ul::after {
+    left: 1px !important; /* perfectly lock to the 1st grid track center on mobile */
+  }
 }
 
 @keyframes timelineRun {
@@ -6378,38 +6382,41 @@ p, .about-text, .timeline-text, .faq-answer p, .p-role, .p-company {
   display: block !important;
   content: "" !important;
   position: absolute !important;
-  height: 1px !important;
-  width: var(--col-gap) !important;
+  height: 2px !important;
+  width: 3.7rem !important;
   top: calc(1.05rem + var(--node-r) / 2) !important;
-  z-index: 0 !important;
+  z-index: -1 !important;
   background: rgba(60, 223, 255, 0.4) !important;
   box-shadow: 0 0 8px rgba(60, 223, 255, 0.3) !important;
   transition: all 0.4s ease !important;
   border-radius: 0 !important;
   opacity: 0.3 !important;
   animation: none !important;
+  transform: none !important;
 }
 
 .Timeline-grid ul li.tl-active::after {
   background: #3cdfff !important;
   box-shadow: 0 0 15px #3cdfff !important;
   opacity: 1 !important;
+  transform: none !important;
 }
 
 .Timeline-grid ul li.tl-complete::after {
   background: rgba(60, 223, 255, 0.6) !important;
   opacity: 0.6 !important;
+  transform: none !important;
 }
 
 /* Explicit precise positioning for left (odd) vs right (even) */
 .Timeline-grid ul li.timeline-stage:nth-child(odd)::after {
-  right: calc(-1 * var(--col-gap) - var(--line-w)/2) !important;
-  left: auto !important;
+  left: 100% !important;
+  right: auto !important;
 }
 
 .Timeline-grid ul li.timeline-stage:nth-child(even)::after {
-  left: calc(-1 * var(--col-gap) - var(--line-w)/2) !important;
-  right: auto !important;
+  right: 100% !important;
+  left: auto !important;
 }
 
 
