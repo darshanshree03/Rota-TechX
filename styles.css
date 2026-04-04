@@ -6452,9 +6452,60 @@ p, .about-text, .timeline-text, .faq-answer p, .p-role, .p-company {
   position: relative;
   width: 100px;
   height: 100px;
-  margin-bottom: 2.5rem;
 }
 
+/* ========================================================
+   MOBILE TIMELINE FIX (CHRONOLOGICAL STACK + ALIGNMENT)
+   ======================================================== */
+@media (max-width: 48rem) {
+  .Timeline-grid ul {
+    display: grid !important;
+    grid-template-columns: var(--line-w) 1fr !important;
+    column-gap: 2.5rem !important; /* Snugger gap for mobile */
+    padding-bottom: 3rem;
+  }
+
+  .Timeline-grid ul::before {
+    grid-column: 1 !important;
+    grid-row: 1 / -1 !important;
+    position: static !important;
+    height: auto !important;
+  }
+
+  /* Reset layout sequentially, preventing Stage 2 from hopping above Stage 1 */
+  .Timeline-grid ul li.timeline-stage,
+  .Timeline-grid ul li.timeline-stage:nth-child(odd),
+  .Timeline-grid ul li.timeline-stage:nth-child(even),
+  .Timeline-grid ul li.timeline-stage:nth-child(2) {
+    grid-column: 2 !important;
+    grid-row: auto !important;
+    margin-bottom: 2rem !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    order: 0 !important;
+  }
+
+  /* Mobile Node Dots Alignment */
+  .Timeline-grid ul li.timeline-stage::before {
+    left: calc(-2.5rem - var(--node-r)/2) !important;
+    right: auto !important;
+  }
+  .Timeline-grid ul li.tl-active::before {
+    left: calc(-2.5rem - var(--node-r-active)/2) !important;
+    right: auto !important;
+  }
+
+  /* Mobile Horizontal Connectors */
+  .Timeline-grid ul li.timeline-stage::after,
+  .Timeline-grid ul li.timeline-stage:nth-child(odd)::after,
+  .Timeline-grid ul li.timeline-stage:nth-child(even)::after {
+    right: 100% !important;
+    left: auto !important;
+    width: 2.5rem !important;
+    transform-origin: right !important;
+  }
+}
 /* Neon Rings */
 .cyber-loader .ring {
   position: absolute;
