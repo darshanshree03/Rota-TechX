@@ -422,21 +422,7 @@ document.addEventListener("DOMContentLoaded", function () {
     animateParticles();
   }
 
-  /* ── Cursor Glow — RAF throttled ── */
-  const cursorGlow = document.createElement("div");
-  cursorGlow.className = "cursor-glow";
-  document.body.appendChild(cursorGlow);
-  let cursorX = 0, cursorY = 0, cursorRAF = false;
-  document.addEventListener("mousemove", (e) => {
-    cursorX = e.clientX; cursorY = e.clientY;
-    if (!cursorRAF) {
-      cursorRAF = true;
-      requestAnimationFrame(() => {
-        cursorGlow.style.transform = `translate(calc(${cursorX}px - 50%), calc(${cursorY}px - 50%))`;
-        cursorRAF = false;
-      });
-    }
-  });
+
 
   /* ── Scroll Reveal ── */
   const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
