@@ -641,7 +641,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const SLIDE_COUNT = slides.length;
     let currentSlide  = 0;
 
-    // Activate the first slide immediately
+    // ── Apply background-image from data-bg attribute ──────────────
+    // data-bg holds the CSS url() string but is never automatically
+    // stamped onto the element — we must do it explicitly here.
+    function applyBg(slide) {
+      const bgEl = slide.querySelector(".gs-bg");
+      if (bgEl && bgEl.dataset.bg && !bgEl.style.backgroundImage) {
+        bgEl.style.backgroundImage = bgEl.dataset.bg;
+      }
+    }
+
+    // Apply first slide immediately so image is visible on load
+    applyBg(slides[0]);
     slides[0].classList.add("active");
 
     function setSlide(index) {
@@ -653,6 +664,9 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => slides[currentSlide]?.classList.remove("exit"), 750);
 
       currentSlide = index;
+
+      // Apply background lazily only when slide first becomes active
+      applyBg(slides[currentSlide]);
 
       // Enter new
       slides[currentSlide].classList.add("active");
@@ -666,8 +680,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // How far into the pinned scroll region we are, 0→1
       const scrolled = Math.max(0, Math.min(1, -wrapperTop / (wrapperHeight - viewportH)));
-
-
 
       // Which slide? — divide 0→1 range into SLIDE_COUNT equal segments
       const idx = Math.min(SLIDE_COUNT - 1, Math.floor(scrolled * SLIDE_COUNT));
